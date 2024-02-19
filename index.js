@@ -1,7 +1,7 @@
 import getFirebaseUserId from './lib/get-firebase-user-info.js';
 
-export const namedExports = {
+export  {
     getFirebaseUserId,
-}
+};
 
 export default namedExports;
