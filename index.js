@@ -4,4 +4,6 @@ export  {
     getFirebaseUserId,
 };
 
-export default namedExports;
+export default {
+    getFirebaseUserId,
+};
