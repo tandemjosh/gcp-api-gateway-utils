@@ -1,4 +1,4 @@
-import getFirebaseUserId from './lib/get-firebase-user-info.js';
+import getFirebaseUserId from './lib/get-firebase-user-id.js';
 
 export  {
     getFirebaseUserId,
