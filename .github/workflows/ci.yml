@@ -1,0 +1,30 @@
+name: Lint and Test Node Package
+
+on:
+  pull_request:
+    types: [opened, reopened]
+  push:
+    branches:
+      - main
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: "read"
+      id-token: "write"
+    steps:
+      - uses: actions/checkout@v3
+      - id: 'auth'
+        name: 'Authenticate to Google Cloud'
+        uses: 'google-github-actions/auth@v2'
+        with:
+          project_id: 'party-line-development'
+          workload_identity_provider: 'projects/291322286538/locations/global/workloadIdentityPools/github-workload-identity-pool/providers/github-workload-provider'
+          service_account: 'party-line-github@party-line-development.iam.gserviceaccount.com'
+      - name: 'Set up Cloud SDK'
+        uses: 'google-github-actions/setup-gcloud@v2'
+      - name: 'Install dependencies'
+        run: npm run artifactregistry-login && npm ci
+      - name: 'Lint Package'
+        run: npm run lint

@@ -1,12 +1,13 @@
 {
   "name": "@tandem/gcp-api-gateway-utils",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "Utils for dealing with api gateway requests and responses",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "artifactregistry-login": "npx google-artifactregistry-auth"
+    "artifactregistry-login": "npx google-artifactregistry-auth",
+    "lint": "eslint *.js"
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/tandemjosh/gcp-api-gateway-utils/issues"
   },
-  "homepage": "https://github.com/tandemjosh/gcp-api-gateway-utils#readme"
+  "homepage": "https://github.com/tandemjosh/gcp-api-gateway-utils#readme",
+  "dependencies": {
+    "@eslint/js": "^9.15.0",
+    "@tandem/eslint": "^0.0.9",
+    "eslint": "^9.15.0"
+  }
 }
