@@ -21,5 +21,7 @@ jobs:
           service_account: 'tandem-github@tandem-dnd.iam.gserviceaccount.com'
       - name: 'Set up Cloud SDK'
         uses: 'google-github-actions/setup-gcloud@v2'
+      - name: 'Install dependencies'
+        run: npm run artifactregistry-login && npm ci
       - name: 'Publish package'
-        run: npx google-artifactregistry-auth && npm publish
+        run: npm run artifactregistry-login && npm publish
