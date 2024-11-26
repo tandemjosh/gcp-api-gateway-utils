@@ -1,6 +1,6 @@
 {
   "name": "@tandem/gcp-api-gateway-utils",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Utils for dealing with api gateway requests and responses",
   "main": "index.js",
   "type": "module",
